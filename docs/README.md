@@ -8,10 +8,10 @@ profile: /profile.jpg
 socials:
   - title: github
     icon: "/icons/github.svg"
-    link: https://github.com/mtobeiyf
-  - title: linkedin
-    icon: "/icons/linkedin-mono.svg"
-    link: https://www.linkedin.com
+    link: https://github.com/cg1177
+  - title: email
+    icon: "/icons/email.svg"
+    link: mailto:chenguo1177[at]gmail.com  
   - title: instagram
     icon: "/icons/instagram-mono.svg"
     link: https://www.instagram.com
