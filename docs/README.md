@@ -2,7 +2,7 @@
 pageClass: home-page
 # some data for the components
 
-name: Guo Chen
+name: Guo Chen (陈果)
 profile: /profile.jpg
 
 socials:
@@ -12,13 +12,10 @@ socials:
   - title: email
     icon: "/icons/email.svg"
     link: mailto:chenguo1177[at]gmail.com  
-  - title: instagram
-    icon: "/icons/instagram-mono.svg"
-    link: https://www.instagram.com
 
 cv: https://en.wikipedia.org/wiki/Harry_Potter
-bio: Student at Hogwarts School
-email: harry (at) hogwarts (dot) edu
+bio: Ph.d Candidate at Nanjing University
+email: chenguo1177@gmail.com  
 ---
 
 <ProfileSection :frontmatter="$page.frontmatter" />
