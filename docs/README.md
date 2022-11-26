@@ -36,7 +36,7 @@ My research interests are MetaUniverse and Robotic intelligence. I am studying a
 - [2022-05-05] We present the [BasicTAD](https://arxiv.org/abs/2205.02717), an end-to-end TAD baseline method. 
 - [2021-12-01] Our paper [DCAN](https://ojs.aaai.org/index.php/AAAI/article/view/19900) is accepted by AAAI.
 
-
+<font color="#dd0000">7</font><br />
 
 
 ## Education & Experiences
