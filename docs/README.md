@@ -24,12 +24,15 @@ email: chenguo1177@gmail.com
 
 I‘m pursuing a Ph.D. in Computer Science at [Nanjing University](https://en.wikipedia.org/wiki/Nanjing_University), advised by Prof. [Limin Wang](http://wanglimin.github.io/) and Prof. [Tong Lu](https://cs.nju.edu.cn/lutong/index.htm). Now I'm working at [Shanghai AI Lab](https://www.shlab.org.cn/).
 
-I'm xxx
+My research interests are MetaUniverse and Robotic intelligence. I am studying about Video Understanding, including Video Pretraining, Action Detection and Egoentric Vision Perception.
+
+
 
 ## News
 
-- [Sept 1991] Attended Hogwarts
-- [July 1980] Born in Godric's Hollow, West Country, England, Great Britain
+- [2021-12-01]  Our paper [DCAN](https://ojs.aaai.org/index.php/AAAI/article/view/19900) is accepted by AAAI, and the [code](https://github.com/cg1177/DCAN) has beed released.
+- [2022-09-15]  We present the [BasicTAD](https://arxiv.org/abs/2205.02717), an end-to-end TAD baseline method. We have released the [source code](https://github.com/MCG-NJU/BasicTAD).
+- [2022-09-19] We win top-1 rankings in **7** tracks in [Ego4D ECCV2022 Challenge](https://ego4d-data.org/workshops/eccv22/). The final [report](https://arxiv.org/pdf/2211.09529.pdf) and the [code](https://github.com/OpenGVLab/ego4d-eccv2022-solutions) have been released.
 
 
 ## Education & Experiences
@@ -38,7 +41,7 @@ I'm xxx
 Sept 1991 - 1997
 
 
-## Projects
+## Publication
 
 
 [→ Full list](/projects/)
@@ -66,9 +69,35 @@ Sept 1991 - 1997
 </ProjectCard>
 
 
-## Awards & Honors
+## Techical Reports
 
-### Contests
+
+[→ Full list](/projects/)
+
+<ProjectCard image="/projects/1.png" hideBorder=true>
+
+  **The Making of Harry Potter's Wand**
+
+  Harry P., Hermione G., *et al*
+  
+  Harry's wand was broken in 1997, but was repaired by him after the 1998 Battle of Hogwarts. Usually the repair of a wand is impossible, but with the use of the Elder Wand it was achievable.
+  
+  [[PDF](https://www.google.com)] [[arXiv](https://arxiv.org)]
+
+</ProjectCard>
+
+<ProjectCard hideBorder=true>
+
+  **Harry Potter and the Deathly Hallows**
+  
+  In the epilogue of Deathly Hallows, which is set 19 years after Voldemort's death, Harry and Ginny are a couple and have three children: James Sirius Potter, who has already been at Hogwarts for at least one year, Albus Severus Potter, who is starting his first year there, and Lily Luna Potter, who is two years away from her first year at the school.
+
+  [[Link](https://www.google.com)]
+
+</ProjectCard>
+
+
+### Awards
 
 - First place in **The Hogwarts House Cup**
 
