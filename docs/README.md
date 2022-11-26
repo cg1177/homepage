@@ -13,7 +13,7 @@ socials:
     icon: "/icons/email.svg"
     link: mailto:chenguo1177[at]gmail.com  
 
-bio: Ph.d Candidate at Nanjing University
+bio: Ph.D Candidate at Nanjing University
 email: chenguo1177@gmail.com  
 ---
 
