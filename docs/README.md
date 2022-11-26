@@ -22,9 +22,8 @@ email: chenguo1177@gmail.com
 
 ## About Me
 
-I attended [Hogwarts School of Witchcraft and Wizardry](https://en.wikipedia.org/wiki/Hogwarts) to study witchcraft, supervised by **Dumbledore** and other professors. 
+I‘m pursuing a Ph.D. in Computer Science at Nanjing University, advised by Prof. Limin Wang and Prof. Tong Lu. Now I'm working at Shanghai AI Lab.
 
-I'm trying my best to battle with Lord Voldemort, the evil Wizard that we all fear. My research area includes Defence Against the Dark Arts and other magic. :dizzy:
 
 
 ## News
