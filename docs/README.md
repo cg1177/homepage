@@ -22,9 +22,9 @@ email: chenguo1177@gmail.com
 
 ## About Me
 
-I‘m pursuing a Ph.D. in Computer Science at Nanjing University, advised by Prof. Limin Wang and Prof. Tong Lu. Now I'm working at Shanghai AI Lab.
+I‘m pursuing a Ph.D. in Computer Science at [Nanjing University](https://en.wikipedia.org/wiki/Nanjing_University), advised by Prof. [Limin Wang](http://wanglimin.github.io/) and Prof. [Tong Lu](https://cs.nju.edu.cn/lutong/index.htm). Now I'm working at [Shanghai AI Lab](https://www.shlab.org.cn/).
 
-
+I'm xxx
 
 ## News
 
