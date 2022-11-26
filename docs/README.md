@@ -13,7 +13,6 @@ socials:
     icon: "/icons/email.svg"
     link: mailto:chenguo1177[at]gmail.com  
 
-cv: https://en.wikipedia.org/wiki/Harry_Potter
 bio: Ph.d Candidate at Nanjing University
 email: chenguo1177@gmail.com  
 ---
