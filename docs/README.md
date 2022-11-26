@@ -41,8 +41,10 @@ My research interests are MetaUniverse and Robotic intelligence. I am studying a
 
 ## Education & Experiences
 
-- **Hogwarts School of Witchcraft and Wizardry** <br/>
-Sept 1991 - 1997
+- **Nanjing University, Nanjing, China** <br/>
+Sept 2020 - present
+- **University of South China, Hengyang, China** <br/>
+Sept 2015 - Jun 2019
 
 
 ## Publication
