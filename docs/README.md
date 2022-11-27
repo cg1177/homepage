@@ -59,7 +59,7 @@ Sept 2015 - Jun 2019
   
   This work explored boundary-based methods for temporal action detection and proposed a novel network, termed DCAN, to improve temporal action detection via temporal-level and proposal-level context aggregation.
   
-  [[PDF](https://ojs.aaai.org/index.php/AAAI/article/view/19900/19659)] [[arXiv](http://arxiv.org/abs/2112.03612)] [[code](https://github.com/cg1177/DCAN)]
+  [[PDF](https://ojs.aaai.org/index.php/AAAI/article/view/19900/19659)] [bibtex](/bibtex/dcan.txt)] [[code](https://github.com/cg1177/DCAN)]
 
 </ProjectCard>
 
@@ -76,7 +76,7 @@ Arxiv, 2022
 
 Introduction: This work presents our champion solutions to five tracks at Ego4D challenge.
   
-  [[PDF](https://arxiv.org/pdf/2211.09529.pdf)] [[arXiv](http://arxiv.org/abs/2112.03612)] [[code](https://github.com/OpenGVLab/ego4d-eccv2022-solutions)]
+  [[PDF](https://arxiv.org/pdf/2211.09529.pdf)] [[bibtex](/bibtex/ego4d.txt)] [[code](https://github.com/OpenGVLab/ego4d-eccv2022-solutions)]
 
 </ProjectCard>
 
