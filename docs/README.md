@@ -64,7 +64,7 @@ Sept 2015 - Jun 2019
 </ProjectCard>
 
 
-## Techical Reports
+## Technical Reports
 
 <ProjectCard image="/projects/ego4d.png" hideBorder=true>
 
