@@ -59,7 +59,7 @@ Sept 2015 - Jun 2019
   
   This work explored boundary-based methods for temporal action detection and proposed a novel network, termed DCAN, to improve temporal action detection via temporal-level and proposal-level context aggregation.
   
-  [[PDF](https://ojs.aaai.org/index.php/AAAI/article/view/19900/19659)] [bibtex](/bibtex/dcan.txt)] [[code](https://github.com/cg1177/DCAN)]
+  [[PDF](https://ojs.aaai.org/index.php/AAAI/article/view/19900/19659)] [[bibtex](/bibtex/dcan.txt)] [[code](https://github.com/cg1177/DCAN)]
 
 </ProjectCard>
 
