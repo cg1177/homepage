@@ -49,15 +49,13 @@ Sept 2015 - Jun 2019
 ## Publication
 
 
-<ProjectCard image="/projects/1.png" hideBorder=true>
+<ProjectCard image="/projects/dcan.png" hideBorder=true>
 
-  **The Making of Harry Potter's Wand**
+  **DCAN: Improving Temporal Action Detection via Dual Context Aggregation**
 
-  Harry P., Hermione G., *et al*
+  Guo Chen, Yin-Dong Zheng, Limin Wang, Tong Lu
   
-  Harry's wand was broken in 1997, but was repaired by him after the 1998 Battle of Hogwarts. Usually the repair of a wand is impossible, but with the use of the Elder Wand it was achievable.
-  
-  [[PDF](https://www.google.com)] [[arXiv](https://arxiv.org)]
+  [[PDF](https://ojs.aaai.org/index.php/AAAI/article/view/19900/19659)] [[arXiv](http://arxiv.org/abs/2112.03612)] [[code](https://github.com/cg1177/DCAN)]
 
 </ProjectCard>
 
