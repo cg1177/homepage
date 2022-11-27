@@ -1,0 +1,9 @@
+@inproceedings{chen2022dcan,
+  title={DCAN: Improving temporal action detection via dual context aggregation},
+  author={Chen, Guo and Zheng, Yin-Dong and Wang, Limin and Lu, Tong},
+  booktitle={Proceedings of the AAAI Conference on Artificial Intelligence},
+  volume={36},
+  number={1},
+  pages={248--257},
+  year={2022}
+}
