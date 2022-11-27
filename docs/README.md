@@ -23,7 +23,7 @@ email: chenguo1177@gmail.com
 
 I‘m pursuing a Ph.D. in Computer Science at [Nanjing University](https://en.wikipedia.org/wiki/Nanjing_University), advised by Prof. [Limin Wang](http://wanglimin.github.io/) and Prof. [Tong Lu](https://cs.nju.edu.cn/lutong/index.htm). Now I'm working at [Shanghai AI Lab](https://www.shlab.org.cn/).
 
-My research interests are MetaUniverse and Robotic intelligence. I am studying Video Understanding, including Video Pretraining, Action Detection and Egocentric Vision Perception.
+My research interests are Meta Universe and Robotic intelligence. I am studying Video Understanding, including Video Pretraining, Action Detection and Egocentric Vision Perception.
 
 
 
