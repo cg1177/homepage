@@ -49,8 +49,6 @@ Sept 2015 - Jun 2019
 ## Publication
 
 
-[→ Full list](/projects/)
-
 <ProjectCard image="/projects/1.png" hideBorder=true>
 
   **The Making of Harry Potter's Wand**
@@ -76,8 +74,6 @@ Sept 2015 - Jun 2019
 
 ## Techical Reports
 
-
-[→ Full list](/projects/)
 
 <ProjectCard image="/projects/1.png" hideBorder=true>
 
