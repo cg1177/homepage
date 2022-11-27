@@ -1,7 +1,7 @@
 ---
 pageClass: about-page
 description: 'The biography and information about me.'
-avatar: /profile.jpg
+avatar: /red panda.jpeg
 head: 'Guo Chen (陈果)'
 info: 'Ph.d Candidate at Nanjing University'
 interests: 'Interests: MetaUniverse and Robotic intelligence'
