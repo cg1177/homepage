@@ -53,19 +53,13 @@ Sept 2015 - Jun 2019
 
   **DCAN: Improving Temporal Action Detection via Dual Context Aggregation**
 
-  Guo Chen, Yin-Dong Zheng, Limin Wang, Tong Lu
+  **Guo Chen**, Yin-Dong Zheng, Limin Wang, Tong Lu#
+  
+  Thirty-Sixth AAAI Conference on Artificial Intelligence (AAAI), 2022
+  
+  I explored boundary-based methods for temporal action detection and proposed a novel network, termed DCAN, to improve temporal action detection via temporal-level and proposal-level context aggregation.
   
   [[PDF](https://ojs.aaai.org/index.php/AAAI/article/view/19900/19659)] [[arXiv](http://arxiv.org/abs/2112.03612)] [[code](https://github.com/cg1177/DCAN)]
-
-</ProjectCard>
-
-<ProjectCard hideBorder=true>
-
-  **Harry Potter and the Deathly Hallows**
-  
-  In the epilogue of Deathly Hallows, which is set 19 years after Voldemort's death, Harry and Ginny are a couple and have three children: James Sirius Potter, who has already been at Hogwarts for at least one year, Albus Severus Potter, who is starting his first year there, and Lily Luna Potter, who is two years away from her first year at the school.
-
-  [[Link](https://www.google.com)]
 
 </ProjectCard>
 
@@ -85,15 +79,6 @@ Sept 2015 - Jun 2019
 
 </ProjectCard>
 
-<ProjectCard hideBorder=true>
-
-  **Harry Potter and the Deathly Hallows**
-  
-  In the epilogue of Deathly Hallows, which is set 19 years after Voldemort's death, Harry and Ginny are a couple and have three children: James Sirius Potter, who has already been at Hogwarts for at least one year, Albus Severus Potter, who is starting his first year there, and Lily Luna Potter, who is two years away from her first year at the school.
-
-  [[Link](https://www.google.com)]
-
-</ProjectCard>
 
 
 ### Awards
