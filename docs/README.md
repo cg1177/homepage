@@ -30,7 +30,7 @@ My research interests are MetaUniverse and Robotic intelligence. I am studying V
 ## News
 
 - [2022-11-17] We provide the final Ego4D [report](https://arxiv.org/pdf/2211.09529.pdf) and the [code](https://github.com/OpenGVLab/ego4d-eccv2022-solutions) have been released.
-- [2022-09-19] Our team wins <font color="#dd0000"><strong>top-1</strong></font> rankings in <font color="#dd0000"><strong>7 tracks</strong></font> in [Ego4D ECCV2022 Challenge](https://ego4d-data.org/workshops/eccv22/).
+- [2022-09-19] Our team wins <font color="#dd0000"><strong>top-1</strong></font> rankings in <font color="#dd0000"><strong>7 tracks</strong></font> of [Ego4D ECCV2022 Challenge](https://ego4d-data.org/workshops/eccv22/).
 - [2022-09-15] We have released the [source code](https://github.com/MCG-NJU/BasicTAD) of [BasicTAD](https://arxiv.org/abs/2205.02717).
 - [2022-06-21] Code of [DCAN](https://ojs.aaai.org/index.php/AAAI/article/view/19900) is released in [here](https://github.com/cg1177/DCAN).
 - [2022-05-05] We present the [BasicTAD](https://arxiv.org/abs/2205.02717), an end-to-end TAD baseline method. 
