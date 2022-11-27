@@ -66,16 +66,17 @@ Sept 2015 - Jun 2019
 
 ## Techical Reports
 
+<ProjectCard image="/projects/ego4d.png" hideBorder=true>
 
-<ProjectCard image="/projects/1.png" hideBorder=true>
+  **InternVideo-Ego4D: A Pack of Champion Solutions to Ego4D Challenges**
 
-  **The Making of Harry Potter's Wand**
+  **Guo Chen***, Sen Xing*, Zhe Chen*, Yi Wang*, Kunchang Li, Yizhuo Li, Yi Liu, Jiahao Wang, Yin-Dong Zheng, Bingkun Huang, Zhiyu Zhao, Junting Pan, Yifei Huang, Zun Wang, Jiashuo Yu, Yinan He, Hongjie Zhang, Tong Lu, Yali Wang, Limin Wang, Yu Qiao#
 
-  Harry P., Hermione G., *et al*
+Arxiv, 2022
+
+Introduction: This work presents our champion solutions to five tracks at Ego4D challenge.
   
-  Harry's wand was broken in 1997, but was repaired by him after the 1998 Battle of Hogwarts. Usually the repair of a wand is impossible, but with the use of the Elder Wand it was achievable.
-  
-  [[PDF](https://www.google.com)] [[arXiv](https://arxiv.org)]
+  [[PDF](https://arxiv.org/pdf/2211.09529.pdf)] [[arXiv](http://arxiv.org/abs/2112.03612)] [[code](https://github.com/OpenGVLab/ego4d-eccv2022-solutions)]
 
 </ProjectCard>
 
