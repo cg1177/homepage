@@ -3,7 +3,7 @@ pageClass: home-page
 # some data for the components
 
 name: Guo Chen (陈果)
-profile: /profile.jpg
+profile: /red panda.jpeg
 
 socials:
   - title: github
