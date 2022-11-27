@@ -57,7 +57,7 @@ Sept 2015 - Jun 2019
   
   Thirty-Sixth AAAI Conference on Artificial Intelligence (AAAI), 2022
   
-  I explored boundary-based methods for temporal action detection and proposed a novel network, termed DCAN, to improve temporal action detection via temporal-level and proposal-level context aggregation.
+  This work explored boundary-based methods for temporal action detection and proposed a novel network, termed DCAN, to improve temporal action detection via temporal-level and proposal-level context aggregation.
   
   [[PDF](https://ojs.aaai.org/index.php/AAAI/article/view/19900/19659)] [[arXiv](http://arxiv.org/abs/2112.03612)] [[code](https://github.com/cg1177/DCAN)]
 
