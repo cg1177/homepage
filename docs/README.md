@@ -80,6 +80,20 @@ Introduction: This work presents our champion solutions to five tracks at Ego4D 
 
 </ProjectCard>
 
+<ProjectCard image="/projects/basictad.png" hideBorder=true>
+
+  **BasicTAD: an Astounding RGB-Only Baseline for Temporal Action Detection**
+
+  Min Yang*, **Guo Chen***, Yin-Dong Zheng, Tong Lu, Limin Wang#
+
+Arxiv, 2022
+
+Introduction: This work presents a simple yet effective end-to-end training framework for temporal action detection.
+  
+  [[PDF](https://arxiv.org/abs/2205.02717)] [[bibtex](/bibtex/basic.txt)] [[code](https://github.com/MCG-NJU/BasicTAD)]
+
+</ProjectCard>
+
 
 
 ### Awards
