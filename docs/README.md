@@ -96,10 +96,12 @@ Introduction: This work presents a simple yet effective end-to-end training fram
 
 
 
-### Awards
+### Contests and Awards
 
-- First place in **The Hogwarts House Cup**
-
+- [2022-10] 2nd Ego4D Challenge, ECCV2022,**7 Top-1 Rankings**
+- [2017-12] CCPC Final Contest, **Bronze Medal**
+- [2017-10] CCPC Regional Contest, **Bronze Medal**
+- [2017-10] ACM-ICPC Asia Regional Contest, **Silver Medal**
 
 <!-- Custom style for this page -->
 
