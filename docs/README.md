@@ -68,6 +68,20 @@ Sept 2015 - Jun 2019
 
 <ProjectCard image="/projects/ego4d.png" hideBorder=true>
 
+  **InternVideo: General Video Foundation Models via Generative and Discriminative Learning**
+
+  Yi Wang, Kunchang Li, Yizhuo Li, Yinan He, Bingkun Huang, Zhiyu Zhao, Hongjie Zhang, Jilan Xu, Yi Liu, Zun Wang, Sen Xing, **Guo Chen**, Junting Pan, Jiashuo Yu, Yali Wang, Limin Wang, Yu Qiao#
+
+Arxiv, 2022
+
+Introduction: This work presents our champion solutions to five tracks at Ego4D challenge.
+  
+  [[PDF](https://arxiv.org/pdf/2211.09529.pdf)] [[bibtex](/bibtex/ego4d.txt)] [[code](https://github.com/OpenGVLab/ego4d-eccv2022-solutions)]
+
+</ProjectCard>
+
+<ProjectCard image="/projects/ego4d.png" hideBorder=true>
+
   **InternVideo-Ego4D: A Pack of Champion Solutions to Ego4D Challenges**
 
   **Guo Chen***, Sen Xing*, Zhe Chen*, Yi Wang*, Kunchang Li, Yizhuo Li, Yi Liu, Jiahao Wang, Yin-Dong Zheng, Bingkun Huang, Zhiyu Zhao, Junting Pan, Yifei Huang, Zun Wang, Jiashuo Yu, Yinan He, Hongjie Zhang, Tong Lu, Yali Wang, Limin Wang, Yu Qiao#
