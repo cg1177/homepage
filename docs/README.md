@@ -74,7 +74,6 @@ Sept 2015 - Jun 2019
 
 Arxiv, 2022
 
-Introduction: This work presents a general video foundation models via generative and discriminative learning, shown excellent performance on a variety of downstream tasks in computer vision.
   
   [[PDF](https://arxiv.org/pdf/2212.03191)] [[bibtex](/bibtex/ego4d.txt)] [[code](https://github.com/OpenGVLab/InternVideo)]
 
