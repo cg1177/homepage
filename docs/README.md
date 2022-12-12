@@ -66,7 +66,7 @@ Sept 2015 - Jun 2019
 
 ## Technical Reports
 
-<ProjectCard image="/projects/ego4d.png" hideBorder=true>
+<ProjectCard image="/projects/internvideo.png" hideBorder=true>
 
   **InternVideo: General Video Foundation Models via Generative and Discriminative Learning**
 
