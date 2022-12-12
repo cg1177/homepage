@@ -75,7 +75,7 @@ Sept 2015 - Jun 2019
 Arxiv, 2022
 
   
-  [[PDF](https://arxiv.org/pdf/2212.03191)] [[bibtex](/bibtex/ego4d.txt)] [[code](https://github.com/OpenGVLab/InternVideo)]
+  [[PDF](https://arxiv.org/pdf/2212.03191)] [[bibtex](/bibtex/internvideo.txt)] [[code](https://github.com/OpenGVLab/InternVideo)]
 
 </ProjectCard>
 
