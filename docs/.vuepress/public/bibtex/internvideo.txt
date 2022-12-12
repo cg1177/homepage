@@ -1,0 +1,6 @@
+@article{wang2022internvideo,
+  title={InternVideo: General Video Foundation Models via Generative and Discriminative Learning},
+  author={Wang, Yi and Li, Kunchang and Li, Yizhuo and He, Yinan and Huang, Bingkun and Zhao, Zhiyu and Zhang, Hongjie and Xu, Jilan and Liu, Yi and Wang, Zun and others},
+  journal={arXiv preprint arXiv:2212.03191},
+  year={2022}
+}
