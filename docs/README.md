@@ -35,7 +35,7 @@ My research interests are Meta Universe and Robotic intelligence. I am studying 
 - [2022-09-15] We have released the [source code](https://github.com/MCG-NJU/BasicTAD) of [BasicTAD](https://arxiv.org/abs/2205.02717).
 - [2022-06-21] Code of [DCAN](https://ojs.aaai.org/index.php/AAAI/article/view/19900) is released in [here](https://github.com/cg1177/DCAN).
 - [2022-05-05] We present the [BasicTAD](https://arxiv.org/abs/2205.02717), an end-to-end TAD baseline method. 
-- [2021-12-01] Our paper [DCAN](https://ojs.aaai.org/index.php/AAAI/article/view/19900) is accepted by AAAI.
+- [2021-12-01] Our paper [DCAN](https://ojs.aaai.org/index.php/AAAI/article/view/19900) is accepted by [AAAI](https://aaai.org/).
 
 
 
@@ -49,6 +49,19 @@ Sept 2015 - Jun 2019
 
 ## Publication
 
+<ProjectCard image="/projects/basictad.png" hideBorder=true>
+
+  **BasicTAD: an Astounding RGB-Only Baseline for Temporal Action Detection**
+
+  Min Yang*, **Guo Chen***, Yin-Dong Zheng, Tong Lu, Limin Wang#
+
+Computer Vision and Image Understanding (CVIU)
+
+Introduction: This work presents a simple yet effective end-to-end training framework for temporal action detection.
+  
+  [[PDF](https://arxiv.org/abs/2205.02717)] [[bibtex](/bibtex/basic.txt)] [[code](https://github.com/MCG-NJU/BasicTAD)]
+
+</ProjectCard>
 
 <ProjectCard image="/projects/dcan.png" hideBorder=true>
 
@@ -108,19 +121,7 @@ Introduction: This work presents our champion solutions to two tracks at Ego4D c
 
 </ProjectCard>
 
-<ProjectCard image="/projects/basictad.png" hideBorder=true>
 
-  **BasicTAD: an Astounding RGB-Only Baseline for Temporal Action Detection**
-
-  Min Yang*, **Guo Chen***, Yin-Dong Zheng, Tong Lu, Limin Wang#
-
-Arxiv, 2022
-
-Introduction: This work presents a simple yet effective end-to-end training framework for temporal action detection.
-  
-  [[PDF](https://arxiv.org/abs/2205.02717)] [[bibtex](/bibtex/basic.txt)] [[code](https://github.com/MCG-NJU/BasicTAD)]
-
-</ProjectCard>
 
 
 
