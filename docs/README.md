@@ -78,7 +78,7 @@ Introduction: This work presents a simple yet effective end-to-end training fram
 </ProjectCard>
 
 
-## Technical Reports
+## Projects
 
 <ProjectCard image="/projects/internvideo.png" hideBorder=true>
 
@@ -107,19 +107,6 @@ Introduction: This work presents our champion solutions to five tracks at Ego4D 
 
 </ProjectCard>
 
-<ProjectCard image="/projects/ego4d_2.png" hideBorder=true>
-
-  **Exploring State Change Capture of Heterogeneous Backbones@ Ego4D Hands and Objects Challenge 2022**
-
-  Yin-Dong Zheng, **Guo Chen**, Jiahao Wang, Tong Lu, Limin Wang
-
-Arxiv, 2022
-
-Introduction: This work presents our champion solutions to two tracks at Ego4D challenge.
-  
-  [[PDF](https://arxiv.org/pdf/2211.08728)] [[bibtex](/bibtex/ego4d_2.txt)] [[code](https://github.com/misanthrope-goth/OSCC_PNR)]
-
-</ProjectCard>
 
 
 
