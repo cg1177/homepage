@@ -114,7 +114,7 @@ Introduction: This work presents our champion solutions to five tracks at Ego4D 
 
 
 ### Contests and Awards
-
+- [2023-01] WSDM Cup 2023 Toloka VQA Challenge, WSDM2023,**Top-1 Ranking**
 - [2022-10] 2nd Ego4D Challenge, ECCV2022,**7 Top-1 Rankings**
 - [2017-12] CCPC Final Contest, **Bronze Medal**
 - [2017-10] CCPC Regional Contest, **Bronze Medal**
