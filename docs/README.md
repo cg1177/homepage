@@ -29,6 +29,8 @@ I am focusing on video understanding, egocentric vision perception and user-cent
 
 
 ## News
+- [2023-08-16] Code of [MAT]() is released in [here](https://github.com/Echo0125/Memory-and-Anticipation-Transformer).
+- [2023-07-14] Our paper [MAT]() is accepted by [ICCV](https://iccv2023.thecvf.com/).
 - [2023-05-22] We present a novel Video Sequence Understanding Framework [VideoLLM](https://arxiv.org/abs/2305.13292).
 - [2023-04-03] [BasicTAD](https://arxiv.org/abs/2205.02717) is accepted by [CVIU](https://www.sciencedirect.com/journal/computer-vision-and-image-understanding).
 - [2023-01-17] Our team wins the champion of [WSDM Cup 2023 Toloka VQA Challenge](https://codalab.lisn.upsaclay.fr/competitions/7434#learn_the_details).
