@@ -29,8 +29,8 @@ I am focusing on video understanding, egocentric vision perception and user-cent
 
 
 ## News
-- [2023-08-16] Code of [MAT]() is released in [here](https://github.com/Echo0125/Memory-and-Anticipation-Transformer).
-- [2023-07-14] Our paper [MAT]() is accepted by [ICCV](https://iccv2023.thecvf.com/).
+- [2023-08-16] Code of [MAT](https://echo0125.github.io/mat/) is released in [here](https://github.com/Echo0125/Memory-and-Anticipation-Transformer).
+- [2023-07-14] Our paper [MAT](https://echo0125.github.io/mat/) is accepted by [ICCV](https://iccv2023.thecvf.com/).
 - [2023-05-22] We present a novel Video Sequence Understanding Framework [VideoLLM](https://arxiv.org/abs/2305.13292).
 - [2023-04-03] [BasicTAD](https://arxiv.org/abs/2205.02717) is accepted by [CVIU](https://www.sciencedirect.com/journal/computer-vision-and-image-understanding).
 - [2023-01-17] Our team wins the champion of [WSDM Cup 2023 Toloka VQA Challenge](https://codalab.lisn.upsaclay.fr/competitions/7434#learn_the_details).
@@ -52,6 +52,20 @@ Sept 2015 - Jun 2019
 
 
 ## Publication
+
+<ProjectCard image="/projects/mat.png" hideBorder=true>
+
+  **Memory-and-Anticipation Transformer for Online Action Understanding**
+
+  Jiahao Wang*, **Guo Chen***, Yifei Huang, Limin Wang, Tong Lu#
+
+International Conference on Computer Vision (ICCV), 2023
+
+Introduction: This work presents a memory-anticipation-based method for online action understanding.
+  
+  [[Home Page](https://echo0125.github.io/mat/)]
+
+</ProjectCard>
 
 <ProjectCard image="/projects/basictad.png" hideBorder=true>
 
