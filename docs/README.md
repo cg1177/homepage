@@ -29,6 +29,7 @@ I am focusing on video understanding, egocentric vision perception and user-cent
 
 
 ## News
+- [2023-10-10] In the first [Perception Test](https://github.com/google-deepmind/perception_test/tree/main) challenge, We obtain the best performance in Temporal Sound Localisation & runner-up in Temporal Action Localisation. The code of solution is [here](https://github.com/OpenGVLab/perception_test_iccv2023).
 - [2023-08-16] Code of [MAT](https://echo0125.github.io/mat/) is released in [here](https://github.com/Echo0125/Memory-and-Anticipation-Transformer).
 - [2023-07-14] Our paper [MAT](https://echo0125.github.io/mat/) is accepted by [ICCV](https://iccv2023.thecvf.com/).
 - [2023-05-22] We present a novel Video Sequence Understanding Framework [VideoLLM](https://arxiv.org/abs/2305.13292).
@@ -131,8 +132,9 @@ Introduction: This work presents our champion solutions to five tracks at Ego4D 
 
 
 ### Contests and Awards
-- [2023-01] WSDM Cup 2023 Toloka VQA Challenge, WSDM2023,**Top-1 Ranking**
-- [2022-10] 2nd Ego4D Challenge, ECCV2022,**7 Top-1 Rankings**
+- [2023-10] 1st Perception Test Challenge, **Top-1 and Top-2 Rankings**
+- [2023-01] WSDM Cup 2023 Toloka VQA Challenge, WSDM2023, **Top-1 Ranking**
+- [2022-10] 2nd Ego4D Challenge, ECCV2022, **7 Top-1 Rankings**
 - [2017-12] CCPC Final Contest, **Bronze Medal**
 - [2017-10] CCPC Regional Contest, **Bronze Medal**
 - [2017-10] ACM-ICPC Asia Regional Contest, **Silver Medal**
