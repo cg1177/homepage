@@ -21,7 +21,9 @@ email: chenguo1177@gmail.com
 
 ## About Me
 
-I‘m pursuing a Ph.D. in Computer Science at [Nanjing University](https://en.wikipedia.org/wiki/Nanjing_University), advised by Prof. [Limin Wang](http://wanglimin.github.io/) and Prof. [Tong Lu](https://cs.nju.edu.cn/lutong/index.htm). Now I'm working at [Shanghai AI Lab](https://www.shlab.org.cn/).
+I‘m pursuing a Ph.D. in Computer Science at [Nanjing University](https://en.wikipedia.org/wiki/Nanjing_University), advised by Prof. [Limin Wang](http://wanglimin.github.io/) and Prof. [Tong Lu](https://cs.nju.edu.cn/lutong/index.htm). 
+<!-- Now I'm working at [Shanghai AI Lab](https://www.shlab.org.cn/). -->
+
 
 My research interests are General visual perception and human-computer and multimodal interaction system. 
 I am focusing on video understanding, egocentric vision perception and user-centric visual computing.
