@@ -13,6 +13,203 @@
     gtag('config', 'UA-172325941-2');
   </script>
 
+  <style>
+        #sortableTable {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 20px 0;
+            background-color: #fff;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+            transition: all 0.3s ease;
+        }
+        #sortableTable th, #sortableTable td {
+            padding: 12px;
+            border-bottom: 1px solid #eee;
+            transition: all 0.2s ease;
+        }
+        #sortableTable th {
+            cursor: pointer;
+            background-color: #4a5568;
+            color: white;
+            position: relative;
+            transition: all 0.3s ease;
+        }
+        #sortableTable th:hover {
+            background-color: #718096;
+            transform: translateY(-2px);
+        }
+        #sortableTable th.sorted-asc::after {
+            content: " ▲";
+            position: absolute;
+            right: 0px;
+            animation: fadeIn 0.5s ease;
+        }
+        #sortableTable th.sorted-desc::after {
+            content: " ▼";
+            position: absolute;
+            right: 0px;
+            animation: fadeIn 0.5s ease;
+        }
+        #sortableTable tr:nth-child(even) {
+            background-color: #f7f9fc;
+        }
+        #sortableTable tr:hover {
+            background-color: #e8f4f8;
+            transform: scale(1.01);
+            box-shadow: 0 2px 12px rgba(0,0,0,0.1);
+        }
+        @keyframes fadeIn {
+            from { opacity: 0; }
+            to { opacity: 1; }
+        }
+        
+        /* 为不同区域设置不同的背景色 */
+        /* Rank */
+        #sortableTable td:nth-child(1) {
+            background-color: #f8fafc;  /* 浅灰色 */
+        }
+        
+        /* Models */
+        #sortableTable td:nth-child(2) {
+            background-color: #e8eef9;  /* 浅蓝灰色 */
+        }
+        
+        /* LLM & #F (columns 3-5) */
+        #sortableTable td:nth-child(3),
+        #sortableTable td:nth-child(4),
+        #sortableTable td:nth-child(5) {
+            background-color: #edf2f7;  /* 浅灰色 */
+        }
+        
+        /* MCQ (columns 6-7) */
+        #sortableTable td:nth-child(6),
+        #sortableTable td:nth-child(7) {
+            background-color: #e6ffed;  /* 非常浅的绿色 */
+        }
+        
+        /* Cred. Eval. (columns 8-11) */
+        #sortableTable td:nth-child(8),
+        #sortableTable td:nth-child(9),
+        #sortableTable td:nth-child(10),
+        #sortableTable td:nth-child(11) {
+            background-color: #fff1f0;  /* 非常浅的红色 */
+        }
+        
+        /* Open-Ended (column 12) */
+        #sortableTable td:nth-child(12) {
+            background-color: #fff7e6;  /* 非常浅的橙色 */
+        }
+
+        /* 奇数行稍微深一点的背景色 */
+        #sortableTable tr:nth-child(odd) td {
+            filter: brightness(0.98);
+        }
+
+        /* Hover效果 */
+        #sortableTable tr:hover td {
+            filter: brightness(0.95);
+            transition: all 0.3s ease;
+        }
+
+        /* 表头基础样式 */
+        #sortableTable thead th {
+            padding: 12px;
+            font-weight: 500;
+            text-align: center;
+            border: none;
+            position: sticky;
+            top: 0;
+            z-index: 1;
+            color: white;
+        }
+
+        /* 不同区域的表头样式 */
+        /* Rank & Models */
+        #sortableTable thead tr:first-child th:nth-child(1),
+        #sortableTable thead tr:first-child th:nth-child(2) { 
+            background-color: #1a202c;  /* 深蓝黑色 */
+        }
+
+        /* LLM & #F 区域 */
+        #sortableTable thead tr:first-child th[colspan="1"]:nth-of-type(3),
+        #sortableTable thead tr:first-child th[colspan="2"]:nth-of-type(4),
+        #sortableTable thead tr:nth-child(2) th:nth-child(3) {
+            background-color: #4a5568;  /* 深灰色 */
+        }
+
+        /* MCQ 区域 */
+        #sortableTable thead tr:first-child th[colspan="2"]:nth-of-type(5),
+        #sortableTable thead tr:nth-child(2) th:nth-child(4),
+        #sortableTable thead tr:nth-child(2) th:nth-child(5) {
+            background-color: #3c8a5f;  /* 深绿色 */
+        }
+
+        /* Cred. Eval. 区域 */
+        #sortableTable thead tr:first-child th[colspan="4"],
+        #sortableTable thead tr:nth-child(2) th:nth-child(6),
+        #sortableTable thead tr:nth-child(2) th:nth-child(7),
+        #sortableTable thead tr:nth-child(2) th:nth-child(8),
+        #sortableTable thead tr:nth-child(2) th:nth-child(9) {
+            background-color: #9b2c2c;  /* 深红色 */
+        }
+
+        /* Open-Ended 区域 */
+        #sortableTable thead tr:first-child th:last-child,
+        #sortableTable thead tr:nth-child(2) th:last-child {
+            background-color: #9c4221;  /* 深棕色 */
+        }
+
+        /* 表头悬停效果 */
+        #sortableTable thead th:hover {
+            filter: brightness(1.1);
+            transition: all 0.3s ease;
+        }
+
+        /* 排序指示器样式 */
+        #sortableTable th.sorted-asc::after,
+        #sortableTable th.sorted-desc::after {
+            margin-left: 8px;
+            font-size: 0.8em;
+        }
+
+        /* 确保表格本身的样式配合表头 */
+        #sortableTable {
+            border-collapse: collapse;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+        }
+
+        /* 移除hover效果 */
+        #sortableTable th:hover {
+            transform: none;
+            background-color: inherit;
+        }
+
+        /* 添加行动画相关样式 */
+        #sortableTable tbody tr {
+            transition: all 0.3s ease;
+        }
+
+        /* 添加行交换动画的类 */
+        .row-transition {
+            animation: rowSwap 0.3s ease;
+        }
+
+        @keyframes rowSwap {
+            0% {
+                transform: translateY(0);
+                opacity: 1;
+            }
+            50% {
+                transform: translateY(10px);
+                opacity: 0.5;
+            }
+            100% {
+                transform: translateY(0);
+                opacity: 1;
+            }
+        }
+  </style>
+
 <div max-width=100%>
   <meta charset="utf-8" />
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
@@ -44,37 +241,55 @@
       <br>
       <center><span style="font-size:44px;font-weight:bold;">CG-Bench: Clue-grounded Question Answering Benchmark <br>for Long Video Understanding</span></center><br/>
       <div class="table-like" style="justify-content:space-evenly;max-width:1000px;margin:auto;">
-          <div><center><span style="font-size:18px"><a href="https://chenguo.netlify.app/" target="_blank">Jiahao Wang*</a></span></center>
-          <center><span style="font-size:18px">Nanjing University</span></center>
+          <div><center><span style="font-size:18px"><a href="https://chenguo.netlify.app/" target="_blank">Guo Chen*</a></span></center>
+          <!-- <center><span style="font-size:18px">Nanjing University</span></center> -->
           </div>
 
-          <div><center><span style="font-size:18px"><a href="/" target="_blank">Guo Chen*</a></span></center>
-          <center><span style="font-size:18px">Nanjing University</span></center>
+          <div><center><span style="font-size:18px"><a href="/" target="_blank">Yicheng Liu*</a></span></center>
+          <!-- <center><span style="font-size:18px">Nanjing University</span></center> -->
           </div>
 
           <div><center><span style="font-size:18px"><a href="https://hyf015.github.io/" target="_blank">Yifei Huang</a></span></center>
-          <center><span style="font-size:18px">Shanghai AI Laboratory</span></center>
+          <!-- <center><span style="font-size:18px">Shanghai AI Laboratory</span></center> -->
+          </div>
+
+          <div><center><span style="font-size:18px"><a href="https://hyf015.github.io/" target="_blank">Yuping He</a></span></center>
+            <!-- <center><span style="font-size:18px">Shanghai AI Laboratory</span></center> -->
+          </div>
+
+          <div><center><span style="font-size:18px"><a href="https://hyf015.github.io/" target="_blank">Baoqi Pei</a></span></center>
+            <!-- <center><span style="font-size:18px">Shanghai AI Laboratory</span></center> -->
+          </div>
+
+          <div><center><span style="font-size:18px"><a href="https://hyf015.github.io/" target="_blank">Jilan Xu</a></span></center>
+            <!-- <center><span style="font-size:18px">Shanghai AI Laboratory</span></center> -->
+          </div>
+
+          <div><center><span style="font-size:18px"><a href="https://hyf015.github.io/" target="_blank">Yali Wang</a></span></center>
+            <!-- <center><span style="font-size:18px">Shanghai AI Laboratory</span></center> -->
           </div>
 
           <div><center><span style="font-size:18px"><a href="http://wanglimin.github.io/" target="_blank">Limin Wang</a></span></center>
-            <center><span style="font-size:18px">Nanjing University</span></center>
+            <!-- <center><span style="font-size:18px">Nanjing University</span></center> -->
           </div>
 
           <div><center><span style="font-size:18px"><a href="https://cs.nju.edu.cn/lutong/index.htm" target="_blank">Tong Lu</a></span></center>
-            <center><span style="font-size:18px">Nanjing University</span></center>
+            <!-- <center><span style="font-size:18px">Nanjing University</span></center> -->
           </div>
-
-            
+    
       </div>
-      <center><span style="font-size:20px;"><a href='https://iccv2023.thecvf.com/'>International Conference
-        on Computer Vision (ICCV), 2023</a></span></center>
+
+      <center><span style="font-size:24px;">Nanjing University</span></center>
+
+      <!-- <center><span style="font-size:20px;"><a href='https://iccv2023.thecvf.com/'>International Conference
+        on Computer Vision (ICCV), 2023</a></span></center> -->
 
       <div class="table-like" style="justify-content:space-evenly;max-width:1200px;margin:auto;padding:5px">
         <div><center><span style="font-size:28px"><a href='https://arxiv.org/abs/2308.07893'>[Paper]</a></span></center></div>
-        <div><center><span style="font-size:28px"><a href='https://github.com/Echo0125/Memory-and-Anticipation-Transformer'>[GitHub Code]</a></span></center> </div>
+        <div><center><span style="font-size:28px"><a href='https://github.com/Echo0125/Memory-and-Anticipation-Transformer'>[Dataset]</a></span></center> </div>
       </div>
 
-      <div style="width:900px; margin:0 auto; text-align=right;">
+      <div style="width:1000px; margin:0 auto; text-align=right;">
       <p>
       <b>Summary:</b> We introduce CG-Bench, a groundbreaking benchmark for clue-grounded question answering in long videos, addressing the limitations of existing benchmarks that focus primarily on short videos and rely on multiple-choice questions (MCQs). These limitations allow models to answer by elimination rather than genuine understanding. CG-Bench enhances evaluation credibility by requiring models to retrieve relevant clues for questions. It includes 1,219 manually curated videos across 14 primary, 171 secondary, and 638 tertiary categories, making it the largest benchmark for long video analysis. With 12,129 QA pairs in perception, reasoning, and hallucination question types, CG-Bench introduces innovative clue-based evaluation methods: clue-grounded white box and black box evaluations, ensuring answers are based on correct video understanding. Evaluations of various MLLMs reveal significant performance gaps in long video comprehension, especially between open-source and commercial models. We aim for CG-Bench to drive the development of more reliable and capable MLLMs for long video understanding. All annotations and video data will be publicly released.
     </p>
@@ -88,13 +303,446 @@
       </div>
       <center>
       <br><hr>
+      
+      <div class="leaderboard-header">
+        <h1>Leaderboard</h1>
+        <div class="leaderboard-description">
+          <p>This leaderboard tracks the performance of different models on the CG-Bench dataset. The evaluation metrics include:</p>
+          <ul>
+            <li><strong>MCQ:</strong> Multiple Choice Questions accuracy on clue-based and long-form tasks</li>
+            <li><strong>Cred. Eval:</strong> Credibility evaluation metrics including mIoU, recall@IoU, accuracy@IoU and CRR</li>
+            <li><strong>Open-Ended:</strong> Performance on open-ended question answering</li>
+          </ul>
+          <p>Click on column headers to sort by different metrics.</p>
+        </div>
+      </div>
 
-      <center><h1>LearderBoard</h1></center>
-      <div style="width:1200px; margin:0 auto; text-align: left">
+      <style>
+        .leaderboard-header {
+          max-width: 1200px;
+          margin: 0 auto;
+          padding: 20px;
+          text-align: center;
+        }
 
+        .leaderboard-header h1 {
+          font-size: 48px;
+          color: #2d3748;
+          margin-bottom: 30px;
+          font-weight: 700;
+          text-transform: uppercase;
+          letter-spacing: 2px;
+        }
+
+        .leaderboard-description {
+          max-width: 800px;
+          margin: 0 auto;
+          color: #4a5568;
+          line-height: 1.6;
+          font-size: 16px;
+          text-align: left;
+          background: #f7fafc;
+          padding: 20px 30px;
+          border-radius: 8px;
+          box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+        }
+
+        .leaderboard-description ul {
+          margin: 15px 0;
+          padding-left: 20px;
+        }
+
+        .leaderboard-description li {
+          margin: 8px 0;
+        }
+
+        .leaderboard-description strong {
+          color: #2d3748;
+        }
+      </style>
+
+      <div style="width:1400px; margin:0 auto; text-align: center">
+        <table id="sortableTable">
+          <thead>
+              <tr>
+                  <th rowspan="2">Rank</th>
+                  <th rowspan="2">Models</th>
+                  <th colspan="1">LLM</th>
+                  <th colspan="2">#F</th>
+                  <th colspan="2">MCQ</th>
+                  <th colspan="4">Cred. Eval.</th>
+                  <th rowspan="1">Open-Ended</th>
+              </tr>
+              <tr>
+                <!-- <th onclick="sortTable(0)">Models</th> -->
+                  <th>#param</th>
+                  <th>clue</th>
+                  <th>long</th>
+                  <th onclick="sortTable(5)">clue-acc.</th>
+                  <th onclick="sortTable(6)">long-acc.</th>
+                  <th onclick="sortTable(7)">mIoU</th>
+                  <th onclick="sortTable(8)">rec.@IoU</th>
+                  <th onclick="sortTable(9)">acc.@IoU</th>
+                  <th onclick="sortTable(10)">CRR</th>
+                  <th onclick="sortTable(11)">acc.</th>
+              </tr>
+          </thead>
+          <tbody>
+              <tr>
+                  <td>1</td>
+                  <td>Videochat2 (Li et al., 2023b)</td>
+                  <td>7B</td>
+                  <td>16</td>
+                  <td>16</td>
+                  <td>48.5</td>
+                  <td>30.1</td>
+                  <td>3.03</td>
+                  <td>2.4</td>
+                  <td>8.31</td>
+                  <td>62.1</td>
+                  <td>8.1</td>
+              </tr>
+              <tr>
+                  <td>2</td>
+                  <td>VideoLLAMA (Zhang et al., 2023)</td>
+                  <td>7B</td>
+                  <td>32</td>
+                  <td>32</td>
+                  <td>49.2</td>
+                  <td>31.2</td>
+                  <td>3.67</td>
+                  <td>3.2</td>
+                  <td>9.1</td>
+                  <td>63.4</td>
+                  <td>9.1</td>
+              </tr>
+              <tr>
+                  <td>3</td>
+                  <td>Video-LLAVA (Lin et al., 2023)</td>
+                  <td>7B</td>
+                  <td>16</td>
+                  <td>16</td>
+                  <td>49.7</td>
+                  <td>30.6</td>
+                  <td>3.41</td>
+                  <td>3.8</td>
+                  <td>9.9</td>
+                  <td>61.6</td>
+                  <td>10.1</td>
+              </tr>
+              <tr>
+                  <td>4</td>
+                  <td>ST-LLM (Liu et al., 2024c)</td>
+                  <td>7B</td>
+                  <td>32</td>
+                  <td>32</td>
+                  <td>50.2</td>
+                  <td>31.3</td>
+                  <td>3.19</td>
+                  <td>3.0</td>
+                  <td>10.3</td>
+                  <td>62.4</td>
+                  <td>11.4</td>
+              </tr>
+              <tr>
+                  <td>5</td>
+                  <td>Chat-UniVi-v1.5 (Jin et al., 2024)</td>
+                  <td>13B</td>
+                  <td>32</td>
+                  <td>64</td>
+                  <td>50.6</td>
+                  <td>33.1</td>
+                  <td>4.45</td>
+                  <td>5.1</td>
+                  <td>11.4</td>
+                  <td>65.4</td>
+                  <td>12.9</td>
+              </tr>
+              <tr>
+                  <td>6</td>
+                  <td>ShareGPT4Video (Chen et al., 2024a)</td>
+                  <td>16B</td>
+                  <td>16</td>
+                  <td>16</td>
+                  <td>51.3</td>
+                  <td>33.6</td>
+                  <td>4.59</td>
+                  <td>4.8</td>
+                  <td>10.8</td>
+                  <td>67.5</td>
+                  <td>13.6</td>
+              </tr>
+              <tr>
+                  <td>7</td>
+                  <td>Qwen-VL-Chat (Bai et al., 2023)</td>
+                  <td>7B</td>
+                  <td>16</td>
+                  <td>16</td>
+                  <td>51.3</td>
+                  <td>34.1</td>
+                  <td>4.30</td>
+                  <td>5.1</td>
+                  <td>11.7</td>
+                  <td>66.5</td>
+                  <td>10.8</td>
+              </tr>
+              <tr>
+                  <td>8</td>
+                  <td>ViLA (Lin et al., 2024)</td>
+                  <td>8B</td>
+                  <td>14</td>
+                  <td>14</td>
+                  <td>53.2</td>
+                  <td>34.6</td>
+                  <td>4.82</td>
+                  <td>4.6</td>
+                  <td>11.5</td>
+                  <td>65.0</td>
+                  <td>9.4</td>
+              </tr>
+              <tr>
+                  <td>9</td>
+                  <td>GroundVQA (Liu et al., 2024d)</td>
+                  <td>0.25B</td>
+                  <td>-</td>
+                  <td>1200</td>
+                  <td>27.3</td>
+                  <td>27.3</td>
+                  <td>3.32</td>
+                  <td>3.5</td>
+                  <td>10.3</td>
+                  <td>59.2</td>
+                  <td>7.2</td>
+              </tr>
+              <tr>
+                  <td>10</td>
+                  <td>GeLM (Chen et al., 2024c)</td>
+                  <td>7B</td>
+                  <td>-</td>
+                  <td>100</td>
+                  <td>-</td>
+                  <td>-</td>
+                  <td>5.15</td>
+                  <td>4.2</td>
+                  <td>-</td>
+                  <td>-</td>
+                  <td>-</td>
+              </tr>
+              <tr>
+                  <td>11</td>
+                  <td>ET-Chat (Liu et al., 2024)</td>
+                  <td>4B</td>
+                  <td>-</td>
+                  <td>1fps</td>
+                  <td>-</td>
+                  <td>-</td>
+                  <td>2.33</td>
+                  <td>2.3</td>
+                  <td>-</td>
+                  <td>-</td>
+                  <td>-</td>
+              </tr>
+              <tr>
+                  <td>12</td>
+                  <td>InternVL-Chat-v1.5 (Chen et al., 2023d)</td>
+                  <td>20B</td>
+                  <td>10</td>
+                  <td>10</td>
+                  <td>54.6</td>
+                  <td>36.3</td>
+                  <td>4.24</td>
+                  <td>4.6</td>
+                  <td>14.2</td>
+                  <td>66.5</td>
+                  <td>9.2</td>
+              </tr>
+              <tr>
+                  <td>13</td>
+                  <td>MiniCPM-v2.6 (Yao et al., 2024)</td>
+                  <td>8B</td>
+                  <td>32</td>
+                  <td>64</td>
+                  <td>53.4</td>
+                  <td>35.4</td>
+                  <td>5.03</td>
+                  <td>4.4</td>
+                  <td>12.2</td>
+                  <td>66.3</td>
+                  <td>13.6</td>
+              </tr>
+              <tr>
+                  <td>14</td>
+                  <td>InternVL2 (Chen et al., 2024e)</td>
+                  <td>34B</td>
+                  <td>16</td>
+                  <td>32</td>
+                  <td>57.3</td>
+                  <td>38.9</td>
+                  <td>4.53</td>
+                  <td>4.3</td>
+                  <td>15.1</td>
+                  <td>67.9</td>
+                  <td>14.4</td>
+              </tr>
+              <tr>
+                  <td>15</td>
+                  <td>Kangaroo (Liu et al., 2024b)</td>
+                  <td>8B</td>
+                  <td>32</td>
+                  <td>64</td>
+                  <td>54.2</td>
+                  <td>36.8</td>
+                  <td>5.12</td>
+                  <td>5.8</td>
+                  <td>12.8</td>
+                  <td>67.9</td>
+                  <td>14.4</td>
+              </tr>
+              <tr>
+                  <td>16</td>
+                  <td>LLaVA-One Vision (Li et al., 2024)</td>
+                  <td>72B</td>
+                  <td>32</td>
+                  <td>32</td>
+                  <td>60.2</td>
+                  <td>40.7</td>
+                  <td>6.14</td>
+                  <td>5.3</td>
+                  <td>15.3</td>
+                  <td>67.7</td>
+                  <td>17.6</td>
+              </tr>
+              <tr>
+                  <td>17</td>
+                  <td>Video-CCAM (Fei et al., 2024)</td>
+                  <td>14B</td>
+                  <td>32</td>
+                  <td>32</td>
+                  <td>57.2</td>
+                  <td>35.7</td>
+                  <td>5.29</td>
+                  <td>5.1</td>
+                  <td>13.6</td>
+                  <td>67.1</td>
+                  <td>14.9</td>
+              </tr>
+              <tr>
+                  <td>18</td>
+                  <td>LongVA (Zhang et al., 2024a)</td>
+                  <td>7B</td>
+                  <td>32</td>
+                  <td>64</td>
+                  <td>53.6</td>
+                  <td>36.9</td>
+                  <td>5.21</td>
+                  <td>6.0</td>
+                  <td>12.7</td>
+                  <td>68.8</td>
+                  <td>14.4</td>
+              </tr>
+              <tr>
+                  <td>19</td>
+                  <td>VITA (Fu et al., 2024b)</td>
+                  <td>8x7B</td>
+                  <td>32</td>
+                  <td>32</td>
+                  <td>59.1</td>
+                  <td>40.3</td>
+                  <td>5.85</td>
+                  <td>6.4</td>
+                  <td>15.8</td>
+                  <td>68.8</td>
+                  <td>16.9</td>
+              </tr>
+              <tr>
+                  <td>20</td>
+                  <td>Qwen2-VL (Wang et al., 2024b)</td>
+                  <td>72B</td>
+                  <td>32</td>
+                  <td>128</td>
+                  <td>65.4</td>
+                  <td>51.4</td>
+                  <td>7.11</td>
+                  <td>6.5</td>
+                  <td>17.1</td>
+                  <td>78.6</td>
+                  <td>25.2</td>
+              </tr>
+              <tr>
+                  <td>21</td>
+                  <td>GPT-4o-08-06 (OpenAI, 2024)</td>
+                  <td>-</td>
+                  <td>32</td>
+                  <td>128</td>
+                  <td>66.5</td>
+                  <td>53.9</td>
+                  <td>8.33</td>
+                  <td>12.3</td>
+                  <td>21.7</td>
+                  <td>81.1</td>
+                  <td>37.2</td>
+              </tr>
+              <tr>
+                  <td>22</td>
+                  <td>GPT-4o-mini-07-25 (OpenAI, 2024)</td>
+                  <td>-</td>
+                  <td>32</td>
+                  <td>128</td>
+                  <td>56.0</td>
+                  <td>41.9</td>
+                  <td>5.56</td>
+                  <td>6.5</td>
+                  <td>15.2</td>
+                  <td>74.8</td>
+                  <td>23.8</td>
+              </tr>
+              <tr>
+                  <td>23</td>
+                  <td>Gemini-1.5-Pro (Anil et al., 2023)</td>
+                  <td>-</td>
+                  <td>32</td>
+                  <td>128</td>
+                  <td>61.6</td>
+                  <td>43.4</td>
+                  <td>7.56</td>
+                  <td>11.4</td>
+                  <td>18.6</td>
+                  <td>75.6</td>
+                  <td>26.9</td>
+              </tr>
+              <tr>
+                  <td>24</td>
+                  <td>Gemini-1.5-Flash (Anil et al., 2023)</td>
+                  <td>-</td>
+                  <td>32</td>
+                  <td>128</td>
+                  <td>60.0</td>
+                  <td>42.0</td>
+                  <td>5.83</td>
+                  <td>7.0</td>
+                  <td>14.9</td>
+                  <td>70.0</td>
+                  <td>16.5</td>
+              </tr>
+              <tr>
+                  <td>25</td>
+                  <td>Claude-3.5-Sonnet</td>
+                  <td>-</td>
+                  <td>20</td>
+                  <td>20</td>
+                  <td>61.7</td>
+                  <td>39.8</td>
+                  <td>5.09</td>
+                  <td>5.5</td>
+                  <td>12.3</td>
+                  <td>64.5</td>
+                  <td>10.3</td>
+              </tr>
+          </tbody>
+      </table>
       </div>
       <br />
-      <center><a href="resources/Framework.png"><img src = "resources/Framework.png" width="800px" ></img></a><br></center>
+      <!-- <center><a href="resources/Framework.png"><img src = "resources/Framework.png" width="800px" ></img></a><br></center> -->
       <!-- <center><a href="resources/teaser_color.png"><img src = "resources/teaser_color.png" width="800px" ></img></a><br></center> -->
       <hr>
 
@@ -103,57 +751,26 @@
       <hr> -->
 
       <div style="width:1200px; margin:0 auto; text-align=center">
-        <center><h1>Details of the Architecture</h1></center>
+        <center><h1>Benchmark Statistics</h1></center>
       </div>
       <div style="width:1200px; margin:0 auto; text-align: left">
         Segment-based Long-term Memory Compression and Conditional Circular Interaction. MAT performs piecewise compression on long-term historical information to extract abstract features, while modeling circular dependencies among all information to form more robust semantic context.
       </div>
+
       <br/>
           <center><a href="resources/details.png"><img src = "resources/details.png" width="800px"></img></a><br></center>
-      <br/><hr>
+      <br/>
+      <hr>
 
 
-            <center id="sourceCode"><h1>Source Code</h1></center>
-            <div style="width:1200px; margin:0 auto; text-align: left">
-                PyTorch code for our paper is open-source and available on GitHub. We include a efficient, pure Python implementation of MAT, as well as training and evaluation code.
-            </div>
-            <table align=center width=300px>
+            <table align=center width=1000px style="max-width: 100%; background: #f7fafc; border-radius: 8px; box-shadow: 0 2px 8px rgba(0,0,0,0.1); padding: 20px; margin: 20px auto;">
+              <center><h1 style="margin-bottom: 20px;">Citation</h1></center>
               <tr>
-                <td width=300px align=center>
-                  <span style="font-size:28px"><a href='https://github.com/Echo0125/Memory-and-Anticipation-Transformer'>[GitHub]</a></span>
-                </td>
-              </tr>
-            </table>
-            <br><hr>
-
-            <table align=center width=700px style="max-width: 100%">
-              <center><h1>Paper and Bibtex</h1></center>
-              <tr>
-              <td width=250px align=left>
-              <!-- <p style="margin-top:4px;"></p> -->
-              <a href="https://arxiv.org/pdf/xxxx.yyyyy.pdf" target="_blank"><img style="height:150px" src="resources/paper.png"/></a>
-              <center>
-              <span style="font-size:20pt"><a href="https://arxiv.org/abs/2308.07893" target="_blank">[Paper]</a></span>
-              </center>
-              </td>
-              <td width=20px align=center>
-              </td>
-              <td width=250px align=left>
-              <p style="text-align:left;">
-                <b><span style="font-size:20pt">Citation</span></b>
-                <br/>
-                <span style="font-size:6px;">&nbsp;<br/></span> <span style="font-size:15pt">Jiahao Wang, Guo Chen, Yifei Huang, Limin Wang, Tong Lu. <br><b>Memory-and-Anticipation Transformer for Online Action Understanding.</b> <br>In <em>International Conference on Computer Vision (ICCV)</em>, 2023.</span></p>
-              </td>
-              </tr>
-              <tr>
-              <td width=250px align=left>
-              </td>
-              <td width=50px align=center>
-              </td>
-              <td width=550px align=left>
-                <div class="paper" id="mat2023_bib">
-<pre xml:space="preserve">
-@misc{chen2023cgbench,
+              <td width=1000px align=left>
+                <div class="paper" id="mat2023_bib" style="background: #fff; border-radius: 4px; padding: 15px; position: relative;">
+                  <button onclick="copyToClipboard()" style="position: absolute; top: 10px; right: 10px; padding: 5px 10px; background: #4a5568; color: white; border: none; border-radius: 4px; cursor: pointer;">Copy</button>
+                  <div id="copyNotification" style="display: none; position: fixed; top: 50%; left: 50%; transform: translate(-50%, -50%); background: rgba(0,0,0,0.8); color: white; padding: 10px 20px; border-radius: 4px; animation: fadeOut 2s forwards;">Citation copied to clipboard!</div>
+                  <pre xml:space="preserve" style="margin: 0; white-space: pre-wrap;">@misc{chen2023cgbench,
       title={CG-Bench: Clue-grounded Question Answering Benchmark for Long Video Understanding}, 
       author={Guo Chen and Yicheng Liu and Yifei Huang and Yuping He and Baoqi Pei and Jilan Xu and Yali Wang and Tong Lu and Limin Wang},
       year={2024},
@@ -162,6 +779,25 @@
       primaryClass={cs.CV}
 }</pre>
                 </div>
+                <style>
+                @keyframes fadeOut {
+                  0% { opacity: 1; }
+                  70% { opacity: 1; }
+                  100% { opacity: 0; }
+                }
+                </style>
+                <script>
+                function copyToClipboard() {
+                  const text = document.querySelector('#mat2023_bib pre').innerText;
+                  navigator.clipboard.writeText(text).then(() => {
+                    const notification = document.getElementById('copyNotification');
+                    notification.style.display = 'block';
+                    setTimeout(() => {
+                      notification.style.display = 'none';
+                    }, 2000);
+                  });
+                }
+                </script>
                 </td>
                 </tr>
             </table>
@@ -173,5 +809,49 @@
       </div>
       </table>
 </div>
+
+
+<script>
+  function sortTable(columnIndex) {
+      const table = document.getElementById("sortableTable");
+      let rows = Array.from(table.tBodies[0].rows);
+      let isAscending = table.getAttribute("data-sort-order") === "asc";
+
+      // Store original rank numbers
+      const originalRanks = rows.map(row => row.cells[0].innerText);
+
+      // Remove existing animation classes
+      rows.forEach(row => row.classList.remove('row-transition'));
+
+      // Sort the rows
+      rows.sort((rowA, rowB) => {
+          const cellA = rowA.cells[columnIndex].innerText;
+          const cellB = rowB.cells[columnIndex].innerText;
+          const numA = parseFloat(cellA);
+          const numB = parseFloat(cellB);
+          if (!isNaN(numA) && !isNaN(numB)) {
+              return isAscending ? numA - numB : numB - numA;
+          }
+          return isAscending ? cellA.localeCompare(cellB) : cellB.localeCompare(cellA);
+      });
+
+      // Apply animation and reorder rows
+      rows.forEach((row, index) => {
+          row.classList.add('row-transition');
+          row.cells[0].innerText = originalRanks[index];
+          table.tBodies[0].appendChild(row);
+      });
+
+      table.setAttribute("data-sort-order", isAscending ? "desc" : "asc");
+
+      // Update sort indicators
+      const headers = table.getElementsByTagName("th");
+      for (let header of headers) {
+          header.classList.remove("sorted-asc", "sorted-desc");
+      }
+      const clickedHeader = table.rows[1].cells[columnIndex-2];
+      clickedHeader.classList.add(isAscending ? "sorted-desc" : "sorted-asc");
+  }
+</script>
 </body>
 </html>
