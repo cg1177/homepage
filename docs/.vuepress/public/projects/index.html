@@ -1,0 +1,176 @@
+<!doctype html>
+<html lang="en-US">
+<link rel="stylesheet" href="resources/styles.css">
+<link href='https://fonts.googleapis.com/css?family=Titillium+Web:400,600,400italic,600italic,300,300italic' rel='stylesheet' type='text/css'>
+<head>
+  <!-- Global site tag (gtag.js) - Google Analytics -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=UA-172325941-2"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+
+    gtag('config', 'UA-172325941-2');
+  </script>
+
+<div max-width=100%>
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <link rel="shortcut icon" href="/favicon.ico" type="image/x-icon">
+  <link rel="icon" href="/favicon.ico" type="image/x-icon">
+  <title>Memory-and-Anticipation Transformer for Online &#13;Action Understanding</title>
+  <meta name="HandheldFriendly" content="True" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="canonical" href="https://echo0125.github.io/mat/" />
+  <meta name="referrer" content="no-referrer-when-downgrade" />
+
+  <meta property="og:site_name" content="MAT" />
+  <meta property="og:type" content="video.other" />
+  <meta property="og:title" content="Memory-and-Anticipation Transformer for Online &#13;Action Understanding" />
+  <meta property="og:description" content="Jiahao Wang, Guo Chen, Yifei Huang, Limin Wang, Tong Lu. Memory-and-Anticipation Transformer for Online Action Understanding. ICCV 2023." />
+  <meta property="og:url" content="https://echo0125.github.io/mat/" />
+
+  <meta property="article:publisher" content="https://github.com/echo0125" />
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="Memory-and-Anticipation Transformer for Online Action Understanding" />
+  <meta name="twitter:description" content="Jiahao Wang, Guo Chen, Yifei Huang, Limin Wang, Tong Lu. Memory-and-Anticipation Transformer for Online Action Understanding. ICCV 2023." />
+  <meta name="twitter:url" content="https://echo0125.github.io/mat/" />
+  <meta name="twitter:site" content="@ajayj_" />
+  <meta property="og:image:width" content="1600" />
+  <meta property="og:image:height" content="900" />
+</head>
+
+<body>
+      <br>
+      <center><span style="font-size:44px;font-weight:bold;">Memory-and-Anticipation Transformer for Online<br>Action Understanding</span></center><br/>
+      <div class="table-like" style="justify-content:space-evenly;max-width:900px;margin:auto;">
+          <div><center><span style="font-size:18px"><a href="https://echo0125.github.io/" target="_blank">Jiahao Wang*</a></span></center>
+          <center><span style="font-size:18px">Nanjing University</span></center>
+          </div>
+
+          <div><center><span style="font-size:18px"><a href="https://chenguo.netlify.app/" target="_blank">Guo Chen*</a></span></center>
+          <center><span style="font-size:18px">Nanjing University</span></center>
+          </div>
+
+          <div><center><span style="font-size:18px"><a href="https://hyf015.github.io/" target="_blank">Yifei Huang</a></span></center>
+          <center><span style="font-size:18px">Shanghai AI Laboratory</span></center>
+          </div>
+
+          <div><center><span style="font-size:18px"><a href="http://wanglimin.github.io/" target="_blank">Limin Wang</a></span></center>
+            <center><span style="font-size:18px">Nanjing University</span></center>
+          </div>
+
+          <div><center><span style="font-size:18px"><a href="https://cs.nju.edu.cn/lutong/index.htm" target="_blank">Tong Lu</a></span></center>
+            <center><span style="font-size:18px">Nanjing University</span></center>
+          </div>
+
+            
+      </div>
+      <center><span style="font-size:20px;"><a href='https://iccv2023.thecvf.com/'>International Conference
+        on Computer Vision (ICCV), 2023</a></span></center>
+
+      <div class="table-like" style="justify-content:space-evenly;max-width:700px;margin:auto;padding:5px">
+        <div><center><span style="font-size:28px"><a href='https://arxiv.org/abs/2308.07893'>[Paper]</a></span></center></div>
+        <div><center><span style="font-size:28px"><a href='https://github.com/Echo0125/Memory-and-Anticipation-Transformer'>[GitHub Code]</a></span></center> </div>
+      </div>
+
+      <div style="width:800px; margin:0 auto; text-align=right;">
+      <p>
+      <b>Summary:</b> We present Memory-and-Anticipation Transformer (MAT), a novel memory-anticipation-based paradigm for online Action Understanding, to overcome the weakness of most existing methods that can only complete modeling temporal dependency within a limited historical context. Through extensive experiments on four challenging benchmarks across two tasks, we show its applicability in predicting present or future actions, obtaining state-of-the-art results, and demonstrating the importance of circular interaction between memory and anticipation in the entire temporal structure.
+    </p>
+      <a href="resources/story_new.png"><img width="600" max-width="100%" src="resources/story_new.png" /></a>
+      <p>
+        <b>Abstract:</b> Most existing forecasting systems are memory-based methods, which attempt to mimic human forecasting ability by employing various memory mechanisms and have progressed in temporal modeling for memory dependency. Nevertheless, an obvious weakness of this paradigm is that it can only model limited historical dependence and can not transcend the past. In this paper, we rethink the temporal dependence of event evolution and propose a novel memory-anticipation-based paradigm to model an entire temporal structure, including the past, present, and future. Based on this idea, we present Memory-and-Anticipation Transformer (MAT), a memory-anticipation-based approach, to address the online Action Understanding tasks. In addition, owing to the inherent superiority of MAT, it can process online Action Understanding tasks in a unified manner. The proposed MAT model is tested on four challenging benchmarks TVSeries, THUMOS'14, HDD, and EPIC-Kitchens-100, for online action detection and anticipation tasks, and it significantly outperforms all existing methods.
+      </p>
+      </div>
+      <center>
+      <br><hr>
+
+      <center><h1>Memory-and-Anticipation Transformer</h1></center>
+      <div style="width:800px; margin:0 auto; text-align: left">
+        Memory-and-Anticipation Transformer (MAT), a novel memory-anticipation-based approach that fully models the complete temporal context, including history, present, and future. A Progressive Memory Encoder is designed to provide a more precise history summary by compressing long- and short-term memory in a segment-based fashion. Meanwhile, we propose our key idea of modeling circular dependencies between memory and future, implemented as  Memory-Anticipation Circular Decoder. It first learns latent future features in a supervised manner, then updates iteratively the enhanced short-term memory and the latent future features by performing Conditional circular Interaction between them. Among them, multiple interaction processes capture the circular dependency and supervise the output to maintain stable features with real semantics. 
+      </div>
+      <br />
+      <center><a href="resources/Framework.png"><img src = "resources/Framework.png" width="800px" ></img></a><br></center>
+      <!-- <center><a href="resources/teaser_color.png"><img src = "resources/teaser_color.png" width="800px" ></img></a><br></center> -->
+      <hr>
+
+
+      <!-- <br />
+      <hr> -->
+
+      <div style="width:800px; margin:0 auto; text-align=center">
+        <center><h1>Details of the Architecture</h1></center>
+      </div>
+      <div style="width:800px; margin:0 auto; text-align: left">
+        Segment-based Long-term Memory Compression and Conditional Circular Interaction. MAT performs piecewise compression on long-term historical information to extract abstract features, while modeling circular dependencies among all information to form more robust semantic context.
+      </div>
+      <br/>
+          <center><a href="resources/details.png"><img src = "resources/details.png" width="800px"></img></a><br></center>
+      <br/><hr>
+
+
+            <center id="sourceCode"><h1>Source Code</h1></center>
+            <div style="width:800px; margin:0 auto; text-align: left">
+                PyTorch code for our paper is open-source and available on GitHub. We include a efficient, pure Python implementation of MAT, as well as training and evaluation code.
+            </div>
+            <table align=center width=300px>
+              <tr>
+                <td width=300px align=center>
+                  <span style="font-size:28px"><a href='https://github.com/Echo0125/Memory-and-Anticipation-Transformer'>[GitHub]</a></span>
+                </td>
+              </tr>
+            </table>
+            <br><hr>
+
+            <table align=center width=700px style="max-width: 100%">
+              <center><h1>Paper and Bibtex</h1></center>
+              <tr>
+              <td width=250px align=left>
+              <!-- <p style="margin-top:4px;"></p> -->
+              <a href="https://arxiv.org/pdf/xxxx.yyyyy.pdf" target="_blank"><img style="height:150px" src="resources/paper.png"/></a>
+              <center>
+              <span style="font-size:20pt"><a href="https://arxiv.org/abs/2308.07893" target="_blank">[Paper]</a></span>
+              </center>
+              </td>
+              <td width=20px align=center>
+              </td>
+              <td width=250px align=left>
+              <p style="text-align:left;">
+                <b><span style="font-size:20pt">Citation</span></b>
+                <br/>
+                <span style="font-size:6px;">&nbsp;<br/></span> <span style="font-size:15pt">Jiahao Wang, Guo Chen, Yifei Huang, Limin Wang, Tong Lu. <br><b>Memory-and-Anticipation Transformer for Online Action Understanding.</b> <br>In <em>International Conference on Computer Vision (ICCV)</em>, 2023.</span></p>
+              </td>
+              </tr>
+              <tr>
+              <td width=250px align=left>
+              </td>
+              <td width=50px align=center>
+              </td>
+              <td width=550px align=left>
+                <div class="paper" id="mat2023_bib">
+<pre xml:space="preserve">
+@misc{wang2023memoryandanticipation,
+      title={Memory-and-Anticipation Transformer for 
+      Online Action Understanding}, 
+      author={Jiahao Wang and Guo Chen and 
+      Yifei Huang and Limin Wang and Tong Lu},
+      year={2023},
+      eprint={2308.07893},
+      archivePrefix={arXiv},
+      primaryClass={cs.CV}
+}</pre>
+                </div>
+                </td>
+                </tr>
+            </table>
+          <hr>
+
+
+      <div style="text-align:right; font-size: 10px;">
+        <a href="https://ramanans1.github.io/plan2explore/" style="color: #ccc">Website source</a>
+      </div>
+      </table>
+</div>
+</body>
+</html>
