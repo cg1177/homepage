@@ -21,9 +21,10 @@
             background-color: #fff;
             box-shadow: 0 2px 8px rgba(0,0,0,0.1);
             transition: all 0.3s ease;
+            font-size: 14px;
         }
         #sortableTable th, #sortableTable td {
-            padding: 12px;
+            padding: 8px;
             border-bottom: 1px solid #eee;
             transition: all 0.2s ease;
         }
@@ -208,6 +209,30 @@
                 opacity: 1;
             }
         }
+
+        /* 为所有图片添加过渡效果 */
+        img {
+            transition: transform 0.3s ease;
+            display: block;  /* 确保margin: auto生效 */
+            max-width: 100%;  /* 保持响应式 */
+        }
+
+        /* 鼠标悬停时的放大效果 */
+        img:hover {
+            transform: scale(1.3);  /* 放大到原始大小的1.3倍 */
+            transition-delay: 0.6s;  /* 添加1秒延迟 */
+        }
+
+        /* 可选：添加平滑阴影效果增强视觉体验 */
+        img {
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        img:hover {
+            transform: scale(1.3);
+            box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+            transition-delay: 0.6s;  /* 阴影效果也延迟1秒 */
+        }
   </style>
 
 <div max-width=100%>
@@ -317,6 +342,15 @@
         </div>
       </div>
 
+      <div class="font-size-controls">
+        <button onclick="adjustFontSize('increase')" class="font-button">
+          <span>A+</span>
+        </button>
+        <button onclick="adjustFontSize('decrease')" class="font-button">
+          <span>A-</span>
+        </button>
+      </div>
+
       <style>
         .leaderboard-header {
           max-width: 1200px;
@@ -358,6 +392,42 @@
 
         .leaderboard-description strong {
           color: #2d3748;
+        }
+
+        .font-size-controls {
+            position: fixed;
+            right: 20px;
+            top: 50%;
+            transform: translateY(-50%);
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+            z-index: 1000;
+        }
+
+        .font-button {
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            border: none;
+            background-color: #4a5568;
+            color: white;
+            cursor: pointer;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: bold;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.2);
+            transition: all 0.3s ease;
+        }
+
+        .font-button:hover {
+            background-color: #2d3748;
+            transform: scale(1.1);
+        }
+
+        .font-button span {
+            font-size: 16px;
         }
       </style>
 
@@ -851,6 +921,31 @@
       }
       const clickedHeader = table.rows[1].cells[columnIndex-2];
       clickedHeader.classList.add(isAscending ? "sorted-desc" : "sorted-asc");
+  }
+
+  function adjustFontSize(action) {
+      const table = document.getElementById('sortableTable');
+      const currentSize = parseFloat(window.getComputedStyle(table).fontSize);
+      
+      let newSize;
+      if (action === 'increase') {
+          newSize = currentSize * 1.1; // 增加10%
+          if (newSize > 24) newSize = 24; // 最大字号限制
+      } else {
+          newSize = currentSize * 0.9; // 减少10%
+          if (newSize < 10) newSize = 10; // 最小字号限制
+      }
+      
+      table.style.fontSize = `${newSize}px`;
+      
+      // 同时调整单元格padding以保持整体布局
+      const cells = table.getElementsByTagName('td');
+      const headers = table.getElementsByTagName('th');
+      const padding = Math.max(6, Math.floor(newSize * 0.5));
+      
+      [...cells, ...headers].forEach(cell => {
+          cell.style.padding = `${padding}px`;
+      });
   }
 </script>
 </body>
