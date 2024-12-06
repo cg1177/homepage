@@ -76,7 +76,7 @@
 
       <div style="width:800px; margin:0 auto; text-align=right;">
       <p>
-      <b>Summary:</b> We present Memory-and-Anticipation Transformer (MAT), a novel memory-anticipation-based paradigm for online Action Understanding, to overcome the weakness of most existing methods that can only complete modeling temporal dependency within a limited historical context. Through extensive experiments on four challenging benchmarks across two tasks, we show its applicability in predicting present or future actions, obtaining state-of-the-art results, and demonstrating the importance of circular interaction between memory and anticipation in the entire temporal structure.
+      <b>Summary:</b> We introduce CG-Bench, a groundbreaking benchmark for clue-grounded question answering in long videos, addressing the limitations of existing benchmarks that focus primarily on short videos and rely on multiple-choice questions (MCQs). These limitations allow models to answer by elimination rather than genuine understanding. CG-Bench enhances evaluation credibility by requiring models to retrieve relevant clues for questions. It includes 1,219 manually curated videos across 14 primary, 171 secondary, and 638 tertiary categories, making it the largest benchmark for long video analysis. With 12,129 QA pairs in perception, reasoning, and hallucination question types, CG-Bench introduces innovative clue-based evaluation methods: clue-grounded white box and black box evaluations, ensuring answers are based on correct video understanding. Evaluations of various MLLMs reveal significant performance gaps in long video comprehension, especially between open-source and commercial models. We aim for CG-Bench to drive the development of more reliable and capable MLLMs for long video understanding. All annotations and video data will be publicly released.
     </p>
       <a href="resources/story_new.png"><img width="600" max-width="100%" src="resources/story_new.png" /></a>
       <p>
@@ -150,13 +150,11 @@
               <td width=550px align=left>
                 <div class="paper" id="mat2023_bib">
 <pre xml:space="preserve">
-@misc{wang2023memoryandanticipation,
-      title={Memory-and-Anticipation Transformer for 
-      Online Action Understanding}, 
-      author={Jiahao Wang and Guo Chen and 
-      Yifei Huang and Limin Wang and Tong Lu},
-      year={2023},
-      eprint={2308.07893},
+@misc{chen2023cgbench,
+      title={CG-Bench: Clue-grounded Question Answering Benchmark for Long Video Understanding}, 
+      author={Guo Chen and Yicheng Liu and Yifei Huang and Yuping He and Baoqi Pei and Jilan Xu and Yali Wang and Tong Lu and Limin Wang},
+      year={2024},
+      eprint={xxxx.xxxxx},
       archivePrefix={arXiv},
       primaryClass={cs.CV}
 }</pre>
