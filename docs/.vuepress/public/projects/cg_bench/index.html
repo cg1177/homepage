@@ -319,6 +319,11 @@
 </head>
 
 <body>
+      <script>
+        window.onload = function() {
+            sortTable(6);
+        }
+      </script>
       <br>
       <center><span style="font-size:44px;font-weight:bold;">CG-Bench: Clue-grounded Question Answering Benchmark <br>for Long Video Understanding</span></center><br/>
       <div class="table-like" style="justify-content:space-evenly;max-width:1000px;margin:auto;">
@@ -379,7 +384,7 @@
         <b>Abstract:</b> Most existing video understanding benchmarks for multimodal large language models (MLLMs) focus only on short videos. The limited number of benchmarks for long video understanding often rely solely on multiple-choice questions (MCQs). However, because of the inherent limitation of MCQ-based evaluation and the increasing reasoning ability of MLLMs, models can give the current answer purely by combining short video understanding with elimination, without genuinely understanding the video content.
            To address this gap, we introduce CG-Bench, a novel benchmark designed for clue-grounded question answering in long videos. CG-Bench emphasizes the model's ability to retrieve relevant clues for questions, enhancing evaluation credibility. It features 1,219 manually curated videos categorized by a granular system with 14 primary categories, 171 secondary categories, and 638 tertiary categories, making it the largest benchmark for long video analysis. The benchmark includes 12,129 QA pairs in three major question types: perception, reasoning, and hallucination.
            Compensating the drawbacks of pure MCQ-based evaluation, we design two novel clue-based evaluation methods: clue-grounded white box and black box evaluations, to assess whether the model generates answers based on the correct understanding of the video.
-           We evaluate multiple closed-source and open-source MLLMs on CG-Bench. Results indicate that current models significantly underperform in understanding long videos compared to short ones, and a significant gap exists between open-source and commercial models. We hope CG-Bench can advance the development of more trustworthy and capable MLLMs for long video understanding. \textcolor{blue}{All annotations and video data will be publicly released.
+           We evaluate multiple closed-source and open-source MLLMs on CG-Bench. Results indicate that current models significantly underperform in understanding long videos compared to short ones, and a significant gap exists between open-source and commercial models. We hope CG-Bench can advance the development of more trustworthy and capable MLLMs for long video understanding. All annotations and video data will be publicly released.
       </p>
       </div>
       <center>
@@ -897,10 +902,11 @@
         <center><h1>Benchmark Statistics</h1></center>
       </div>
       <div style="width:1200px; margin:0 auto; text-align: left">
-        <b>Video Meta:</b> Our dataset comprises a total of 1219 videos with multiple multimodal information, including vision, audio, and subtitles. The duration of the videos varies between 10 and 80 minutes, with a distribution illustrated in Figure~\ref{fig:video-duration-dis}. Notably, videos that last between 20 and 30 minutes are the most prevalent. This selection process is manual, based on content relevance, which mirrors real-world duration distributions and highlights a long-tail effect for longer videos.
-        As illustrated in Figure~\ref{fig:video-categroy}, each video is classified using a three-tiered tagging system that succinctly encapsulates its content and assigns it to fundamental categories. The primary classification is augmented by a secondary layer of 171 tags and a tertiary layer consisting of 638 tags. This multi-level tagging mechanism guarantees a broad diversity of data content. For a more detailed classification of tags, please consult the supplementary materials.
+        <b>Video Meta:</b> Our dataset comprises a total of 1219 videos with multiple multimodal information, including vision, audio, and subtitles. The duration of the videos varies between 10 and 80 minutes. Notably, videos that last between 20 and 30 minutes are the most prevalent. This selection process is manual, based on content relevance, which mirrors real-world duration distributions and highlights a long-tail effect for longer videos.
+        As illustrated in Figure 2, each video is classified using a three-tiered tagging system that succinctly encapsulates its content and assigns it to fundamental categories. The primary classification is augmented by a secondary layer of 171 tags and a tertiary layer consisting of 638 tags. This multi-level tagging mechanism guarantees a broad diversity of data content. For a more detailed classification of tags, please consult the supplementary materials.
         <br>
-        <b>Question Meta:</b> We evaluate the quality of videos using the widely-adopted VMAF (Video Multi-Method Assessment Fusion) metric, which quantifies the perceptual quality of videos by considering both objective and subjective aspects. VMAF scores range from 0 to 100, with higher values indicating better quality. The distribution of VMAF scores is displayed in Figure~\ref{fig:video-quality-dis}.
+        <b>Question Meta:</b> We annotate it with high-quality question-answer-clue (QAC) triplets. To ensure question diversity, we first establish a taxonomy with three main types: Perception, Reasoning, and Hallucination. As shown in Figure 3, Perception and Reasoning questions are further divided into 10 and 14 subcategories, respectively, while Hallucination questions combine elements of both perception and reasoning.
+        Annotators are instructed to include negative options to create a multiple-choice QA format, facilitating straightforward and cost-effective assessments. To minimize expression loss, annotators use their native language during the annotation process. Each video requires between 6 to 15 QAC triplets, depending on its duration.
       </div>
 
       <br/>
@@ -1029,7 +1035,7 @@
       let newSize;
       if (action === 'increase') {
           newSize = currentSize * 1.1; // 增加10%
-          if (newSize > 24) newSize = 24; // 最大字号限制
+          if (newSize > 24) newSize = 24; // ��大字号限制
       } else {
           newSize = currentSize * 0.9; // 减少10%
           if (newSize < 10) newSize = 10; // 最小字号限制
