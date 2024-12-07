@@ -233,6 +233,62 @@
             box-shadow: 0 4px 12px rgba(0,0,0,0.1);
             transition-delay: 0.6s;  /* 阴影效果也延迟1秒 */
         }
+
+        /* 为前三行设置不同的高度、字体大小和粗细的过渡效果 */
+        #sortableTable tbody tr:nth-child(1) {
+            height: 80px;  /* 第一行最高 */
+            background: linear-gradient(to bottom, rgba(255,255,255,0.1) 0%, rgba(255,255,255,0) 100%);
+            transition: all 0.3s ease;
+        }
+        
+        #sortableTable tbody tr:nth-child(1) td {
+            font-size: 18px;  /* 第一行字体最大 */
+            font-weight: 700;  /* 最粗 */
+            color: #000;  /* 更深的颜色 */
+        }
+        
+        #sortableTable tbody tr:nth-child(2) {
+            height: 65px;  /* 第二行次高 */
+            background: linear-gradient(to bottom, rgba(255,255,255,0.05) 0%, rgba(255,255,255,0) 100%);
+            transition: all 0.3s ease;
+        }
+        
+        #sortableTable tbody tr:nth-child(2) td {
+            font-size: 16px;  /* 第二行字体稍小 */
+            font-weight: 600;  /* 次粗 */
+            color: #1a1a1a;
+        }
+        
+        #sortableTable tbody tr:nth-child(3) {
+            height: 50px;  /* 第三行最接近普通行高 */
+            background: linear-gradient(to bottom, rgba(255,255,255,0.02) 0%, rgba(255,255,255,0) 100%);
+            transition: all 0.3s ease;
+        }
+        
+        #sortableTable tbody tr:nth-child(3) td {
+            font-size: 15px;  /* 第三行字体更接近普通大小 */
+            font-weight: 500;  /* 中等粗细 */
+            color: #333;
+        }
+
+        /* 确保其他行保持正常样式 */
+        #sortableTable tbody tr {
+            height: 40px;  /* 普通行的高度 */
+            transition: all 0.3s ease;
+        }
+        
+        #sortableTable tbody tr td {
+            font-size: 14px;  /* 普通行的字体大小 */
+            font-weight: 400;  /* 普通粗细 */
+            color: #444;
+            vertical-align: middle;
+            transition: all 0.3s ease;
+        }
+
+        /* 保持单元格内容垂直居中 */
+        #sortableTable tbody td {
+            vertical-align: middle;
+        }
   </style>
 
 <div max-width=100%>
@@ -334,9 +390,26 @@
         <div class="leaderboard-description">
           <p>This leaderboard tracks the performance of different models on the CG-Bench dataset. The evaluation metrics include:</p>
           <ul>
-            <li><strong>MCQ:</strong> Multiple Choice Questions accuracy on clue-based and long-form tasks</li>
-            <li><strong>Cred. Eval:</strong> Credibility evaluation metrics including mIoU, recall@IoU, accuracy@IoU and CRR</li>
-            <li><strong>Open-Ended:</strong> Performance on open-ended question answering</li>
+            <li><strong>MCQ:</strong> Multiple Choice Questions accuracy on clue-based and long-video settings:
+              <ul>
+                <li><strong>clue-acc:</strong> Accuracy on multiple choice questions when only given the relevant video clue segments</li>
+                <li><strong>long-acc:</strong> Accuracy on multiple choice questions when processing the entire long video</li>
+              </ul>
+            </li>
+            
+            <li><strong>Cred. Eval:</strong> Credibility evaluation metrics including:
+              <ul>
+                <li><strong>mIoU:</strong> Mean Intersection over Union - measures the overlap between predicted and ground truth clue intervals</li>
+                <li><strong>recall@IoU:</strong> Percentage of predictions with IoU above threshold - evaluates model's ability to locate relevant clues</li>
+                <li><strong>accuracy@IoU:</strong> Answer accuracy when IoU exceeds threshold - assesses answer quality with correct clue identification</li>
+                <li><strong>CRR:</strong> Clue Retrieval Rate - measures model's overall effectiveness in finding relevant video segments</li>
+              </ul>
+            </li>
+            <li><strong>Open-Ended:</strong> Performance on open-ended question answering
+              <ul>
+                <li><strong>acc:</strong> Accuracy on open-ended questions</li>
+              </ul>
+            </li>
           </ul>
           <p>Click on column headers to sort by different metrics.</p>
         </div>
@@ -369,11 +442,11 @@
         }
 
         .leaderboard-description {
-          max-width: 800px;
+          max-width: 1000px;
           margin: 0 auto;
           color: #4a5568;
           line-height: 1.6;
-          font-size: 16px;
+          font-size: 17px;
           text-align: left;
           background: #f7fafc;
           padding: 20px 30px;
@@ -824,14 +897,40 @@
         <center><h1>Benchmark Statistics</h1></center>
       </div>
       <div style="width:1200px; margin:0 auto; text-align: left">
-        Segment-based Long-term Memory Compression and Conditional Circular Interaction. MAT performs piecewise compression on long-term historical information to extract abstract features, while modeling circular dependencies among all information to form more robust semantic context.
+        <b>Video Meta:</b> Our dataset comprises a total of 1219 videos with multiple multimodal information, including vision, audio, and subtitles. The duration of the videos varies between 10 and 80 minutes, with a distribution illustrated in Figure~\ref{fig:video-duration-dis}. Notably, videos that last between 20 and 30 minutes are the most prevalent. This selection process is manual, based on content relevance, which mirrors real-world duration distributions and highlights a long-tail effect for longer videos.
+        As illustrated in Figure~\ref{fig:video-categroy}, each video is classified using a three-tiered tagging system that succinctly encapsulates its content and assigns it to fundamental categories. The primary classification is augmented by a secondary layer of 171 tags and a tertiary layer consisting of 638 tags. This multi-level tagging mechanism guarantees a broad diversity of data content. For a more detailed classification of tags, please consult the supplementary materials.
+        <br>
+        <b>Question Meta:</b> We evaluate the quality of videos using the widely-adopted VMAF (Video Multi-Method Assessment Fusion) metric, which quantifies the perceptual quality of videos by considering both objective and subjective aspects. VMAF scores range from 0 to 100, with higher values indicating better quality. The distribution of VMAF scores is displayed in Figure~\ref{fig:video-quality-dis}.
       </div>
 
       <br/>
-          <center><a href="resources/details.png"><img src = "resources/details.png" width="800px"></img></a><br></center>
+          <center><a href="resources/statistics.jpg"><img src = "resources/statistics.jpg" width="1000px"></img></a><br></center>
       <br/>
       <hr>
 
+      <div style="width:1200px; margin:0 auto; text-align=center">
+        <center><h1>Benchmark Comparison</h1></center>
+      </div>
+      <div style="width:1200px; margin:0 auto; text-align: left">
+        CG-Bench is characterized by its diverse features, allowing it to be compared with three distinct types of benchmarks, as depicted in the three sections of Table~\ref{comparison-bebchmark-table}: Question Clue Grounding, Short-Video QA, and Long-Video QA benchmarks.
+        <br>
+        <b>Question Grounding:</b> \textcolor{blue}{For the question clue grounding benchmarks, NextGQA~\citep{xiao2024nextgqa}, Ego4D-NLQ~\citep{ego4d}, MultiHop-EgoQA~\citep{chen2024multihop-egoqa}, E.T. Bench~\citep{liu2024etbench}, and RexTime~\citep{chen2024rextime} are primarily centered around action and egocentric domains. Their videos are sampled from academic datasets.}
+        In comparison, the question clue grounding part of CG-Bench, CG-Bench-QG, stands out with the highest number of videos and the longest average length, the diversity of which fosters a broad spectrum of question-grounding queries. 
+        <br>
+        <b>Short-Video Question Answering:</b> Furthermore, we transform QAC triplets to our novel Short-Video QA benchmark, termed CG-Bench-Clue. When contrasted with prior short video benchmarks such as TempCompass~\citep{liu2024tempcompass}, MVBench~\citep{mvbench} and MMBench-Video~\citep{fang2024mmbenchvideo}, our CG-Bench-Clue emerges as the \emph{largest}, \emph{held-out}, \emph{open-domain} and \emph{multimodal} Short-Video QA benchmark. 
+        <br>
+        <b>Long-Video Question Answering:</b> As for the Long-Video QA benchmark, CG-Bench excels in the number of videos, length, quantity of questions, and annotation quality. Owing to our clue interval annotations, CG-Bench further facilitates reliable evaluations for long videos and open-ended evaluations with clue assistance, a feature that sets it apart from existing long video benchmarks like Video-MME~\citep{videomme} and MLVU~\citep{zhou2024mlvu}.
+      </div>
+      <br/>
+      <center><a href="resources/comparison.jpg"><img src = "resources/comparison.jpg" width="1000px"></img></a><br></center>
+      <br/>
+    <hr>
+
+    <div style="width:1200px; margin:0 auto; text-align=center">
+      <center><h1>Experiments Results</h1></center>
+    </div>
+    <center><a href="resources/experimental_results.jpg"><img src = "resources/experimental_results.jpg" width="1000px"></img></a><br></center>
+    <hr>
 
             <table align=center width=1000px style="max-width: 100%; background: #f7fafc; border-radius: 8px; box-shadow: 0 2px 8px rgba(0,0,0,0.1); padding: 20px; margin: 20px auto;">
               <center><h1 style="margin-bottom: 20px;">Citation</h1></center>
@@ -936,15 +1035,24 @@
           if (newSize < 10) newSize = 10; // 最小字号限制
       }
       
+      // 应用到整个表格及其所有子元素
       table.style.fontSize = `${newSize}px`;
       
-      // 同时调整单元格padding以保持整体布局
+      // 调整表格内所有单元格的padding以保持布局比例
       const cells = table.getElementsByTagName('td');
       const headers = table.getElementsByTagName('th');
       const padding = Math.max(6, Math.floor(newSize * 0.5));
       
       [...cells, ...headers].forEach(cell => {
           cell.style.padding = `${padding}px`;
+      });
+
+      // 确保表格内的所有文本元素都继承新的字体大小
+      const allElements = table.getElementsByTagName('*');
+      [...allElements].forEach(element => {
+          if (element.tagName !== 'IMG' && element.tagName !== 'BUTTON') {
+              element.style.fontSize = `${newSize}px`;
+          }
       });
   }
 </script>
