@@ -465,32 +465,6 @@
       
       <div class="leaderboard-header" id="leaderboard">
         <h1>Leaderboard</h1>
-        <div class="leaderboard-description">
-          <p>This leaderboard tracks the performance of different models on the CG-Bench dataset. The evaluation metrics include:</p>
-          <ul>
-            <li><strong>MCQ:</strong> Multiple Choice Questions accuracy on clue-based and long-video settings:
-              <ul>
-                <li><strong>clue-acc:</strong> Accuracy on multiple choice questions when only given the relevant video clue segments</li>
-                <li><strong>long-acc:</strong> Accuracy on multiple choice questions when processing the entire long video</li>
-              </ul>
-            </li>
-            
-            <li><strong>Cred. Eval:</strong> Credibility evaluation metrics including:
-              <ul>
-                <li><strong>mIoU:</strong> Mean Intersection over Union - measures the overlap between predicted and ground truth clue intervals</li>
-                <li><strong>recall@IoU:</strong> Percentage of predictions with IoU above threshold - evaluates model's ability to locate relevant clues</li>
-                <li><strong>accuracy@IoU:</strong> Answer accuracy when IoU exceeds threshold - assesses answer quality with correct clue identification</li>
-                <li><strong>CRR:</strong> Clue Retrieval Rate - measures model's overall effectiveness in finding relevant video segments</li>
-              </ul>
-            </li>
-            <li><strong>Open-Ended:</strong> Performance on open-ended question answering
-              <ul>
-                <li><strong>acc:</strong> Accuracy on open-ended questions</li>
-              </ul>
-            </li>
-          </ul>
-          <p>Click on column headers to sort by different metrics.</p>
-        </div>
       </div>
 
       <div class="font-size-controls">
@@ -962,10 +936,34 @@
           </tbody>
       </table>
       </div>
-      <br />
-      <!-- <center><a href="resources/Framework.png"><img src = "resources/Framework.png" width="800px" ></img></a><br></center> -->
-      <!-- <center><a href="resources/teaser_color.png"><img src = "resources/teaser_color.png" width="800px" ></img></a><br></center> -->
-      <hr>
+      <div class="leaderboard-header">
+        <div class="leaderboard-description">
+          <p>This leaderboard tracks the performance of different models on the CG-Bench dataset. The evaluation metrics include:</p>
+          <ul>
+            <li><strong>MCQ:</strong> Multiple Choice Questions accuracy on clue-based and long-video settings:
+              <ul>
+                <li><strong>clue-acc:</strong> Accuracy on multiple choice questions when only given the relevant video clue segments</li>
+                <li><strong>long-acc:</strong> Accuracy on multiple choice questions when processing the entire long video</li>
+              </ul>
+            </li>
+            
+            <li><strong>Cred. Eval:</strong> Credibility evaluation metrics including:
+              <ul>
+                <li><strong>mIoU:</strong> Mean Intersection over Union - measures the overlap between predicted and ground truth clue intervals</li>
+                <li><strong>recall@IoU:</strong> Percentage of predictions with IoU above threshold - evaluates model's ability to locate relevant clues</li>
+                <li><strong>accuracy@IoU:</strong> Answer accuracy when IoU exceeds threshold - assesses answer quality with correct clue identification</li>
+                <li><strong>CRR:</strong> Clue Retrieval Rate - measures model's overall effectiveness in finding relevant video segments</li>
+              </ul>
+            </li>
+            <li><strong>Open-Ended:</strong> Performance on open-ended question answering
+              <ul>
+                <li><strong>acc:</strong> Accuracy on open-ended questions</li>
+              </ul>
+            </li>
+          </ul>
+          <p>Click on column headers to sort by different metrics.</p>
+        </div>
+      </div>
 
 
       <!-- <br />
